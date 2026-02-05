@@ -6,3 +6,5 @@ def devide(a, b):
         raise ValueError("Denominator could not be zero!!!")
     return a / b
 
+def mul(a, b):
+    return a * b
