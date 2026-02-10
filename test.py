@@ -12,6 +12,13 @@ def test_devide():
     result = 0.5
     assert devide(a, b) == result
 
+def test_devison_problem():
+    try:
+        devide("A", "B")
+        assert False
+    except ValueError as e:
+        print("Error!")
+
 def test_mul():
     a = 4
     b = 9
@@ -22,3 +29,4 @@ if __name__ == "__main__":
     test_devide() 
     test_sum()
     test_mul()
+    test_devision_problem()
