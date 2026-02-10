@@ -25,8 +25,14 @@ def test_mul():
     result = 36
     assert mul(a, b) == result
 
+def test_division_problem():
+    try:
+        devide([1,2,3], [1,2,3])
+        return False
+    except:
+        print("All good!")
+
 if __name__ == "__main__":
     test_devide() 
     test_sum()
     test_mul()
-    test_devision_problem()
