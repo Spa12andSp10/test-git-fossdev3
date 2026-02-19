@@ -10,5 +10,8 @@ def devide(a, b):
         raise ValueError("Error_number_2")
     return a / b
 
+def sub(a, b):
+    return a - b
+
 def mul(a, b):
     return a * b
