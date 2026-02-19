@@ -1,4 +1,4 @@
-from script import sum, devide, mul, sub
+from script import sum, divide, mul, sub
 
 def test_sum():
     a = 1
@@ -6,15 +6,15 @@ def test_sum():
     result = 3
     assert sum(a, b) == result
 
-def test_devide():
+def test_divide():
     a = 4
     b = 2
     result = 0.5
-    assert devide(a, b) == result
+    assert divide(a, b) == result
 
 def test_devison_problem():
     try:
-        devide("A", "B")
+        divide("A", "B")
         assert False
     except ValueError as e:
         print("Error!")
@@ -27,7 +27,7 @@ def test_mul():
 
 def test_division_problem():
     try:
-        devide([1,2,3], [1,2,3])
+        divide([1,2,3], [1,2,3])
         return False
     except:
         print("All good!")
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     test_sum()
     test_mul()
     test_sub()
-    test_devide()
+    test_divide()
