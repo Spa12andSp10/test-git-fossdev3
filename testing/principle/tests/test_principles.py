@@ -19,6 +19,15 @@ def test_addition_dublicate():
     assert add(6, 7) == 6 + 7
     print("Test Duplicate Addition passed")
 
+def test_addition_overkill():
+    for i in range(0, 2 ** 32):
+        for j in range(0, 2 ** 32):
+            assert add(i, j) == i + j
+            assert add(i, j) == -i + j
+            assert add(-i, -j) == -i - j
+            assert add(i, -j) == i - j
 if __name__ == '__main__':
     test_addition()
     test_addition_with_bug()
+    test_addition_dublicate()
+    #test_addition_overkill()
