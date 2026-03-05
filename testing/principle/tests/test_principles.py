@@ -1,7 +1,7 @@
 import sys
 sys.path.append("../scr")
 
-from math_demo import add, add_with_bug
+from math_demo import add, add_with_bug, tax_calculator_bugged, tax_calculator
 
 def test_addition():
     assert add(2, 2) == 4
@@ -44,6 +44,23 @@ def test_addition_commutative():
     assert add(5, 9) == 14
     print("test commutative passed")
 
+def test_tax_calculator_pesticide():
+    assert tax_calculator_bugged(1000) == 150
+    assert tax_calculator_bugged(100) == 15
+    assert tax_calculator_bugged(10) == 1.5
+    assert tax_calculator_bugged(1) == 0.15
+    assert tax_calculator_bugged(234) == 35.1
+    print("Test tax calculator pesticide passed")
+    #assert tax_calculator_bugged(2.34) == 0.35
+
+def test_tax_calculator():
+    assert tax_calculator(1000) == 150
+    assert tax_calculator(100) == 15
+    assert tax_calculator(10) == 1.5
+    assert tax_calculator(1) == 0.15
+    assert tax_calculator(234) == 35.1
+    assert tax_calculator(2.34) == 0.35
+    print("Test tax calculator passed")
 
 if __name__ == '__main__':
     test_addition()
@@ -52,3 +69,5 @@ if __name__ == '__main__':
     #test_addition_overkill()
     test_addition_clasters()
     test_addition_commutative()
+    test_tax_calculator_pesticide()
+    test_tax_calculator()
