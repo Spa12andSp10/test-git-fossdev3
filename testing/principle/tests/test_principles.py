@@ -39,6 +39,11 @@ def test_addition_clasters():
     assert add(5, 9) == 14
     print("test clasters passed")
 
+def test_addition_commutative():
+    assert add(9, 5) == 14
+    assert add(5, 9) == 14
+    print("test commutative passed")
+
 
 if __name__ == '__main__':
     test_addition()
@@ -46,3 +51,4 @@ if __name__ == '__main__':
     test_addition_dublicate()
     #test_addition_overkill()
     test_addition_clasters()
+    test_addition_commutative()
