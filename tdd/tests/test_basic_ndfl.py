@@ -1,3 +1,4 @@
+import pytest
 from ndfl import calculate_ndfl
 
 # TODO make test to obey principles
@@ -16,4 +17,8 @@ def test_ndsl_tier_4_basic():
 
 def test_ndsl_tier_5_basic():
     assert calculate_ndfl(60_000_000) == 11_602_000
+
+@pytest.mark.xfail
+def test_ndsl_fails_negative_income():
+    calculate_ndfl(-1000)
 

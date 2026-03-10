@@ -6,4 +6,4 @@ def calculate_ndfl(income):
     for start, addition, taxrate in tiers[::-1]:
         if income > start:
             return (income - start) * taxrate + addition
-    raise RunTimeError(f"Error in tax calculation!")
+    raise RuntimeError(f"Error in tax calculation!")
