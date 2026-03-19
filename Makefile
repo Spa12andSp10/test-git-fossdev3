@@ -6,6 +6,7 @@ ifndef PRACTICE
 endif
 	@echo "Creating file"
 	mkdir -p $(PRACTICE)
+	cp PracticeMakefile $(PRACTICE)/Makefile
 
 remove-practice:
 ifndef PRACTICE
@@ -16,9 +17,3 @@ endif
 help:
 	@echo "This makefile for repo-level activity"
 
-
-# mkdir demo-practice
-# mkdir demo-practice/src
-# mkdir demo-practice/tests
-# mkdir demo-practice/docs
-# touch demo-practice/README.md
