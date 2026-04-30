@@ -12,3 +12,15 @@ install:
 
 test-pytest:
 	python3 -m pytest
+
+HOST ?= 127.0.0.1
+PORT ?= 8001
+
+run-order:
+	export PRODUCT_SERVICE_URL && poetry run uvicorn src.app.main:app --host ${HOST} --port 8002
+
+run-product:
+	cd .. && cd product_service && poetry run uvicorn src.app.main:app --host ${HOST} --port ${PORT}
+
+run:
+	make -j2 run-order run-product
